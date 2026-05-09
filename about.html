@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="logo.png">
+<title>About | University of Eastern Pangasinan</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+   background: linear-gradient(to right, #eef2f3, #ffffff);
+    padding-top: 110px;}
+
+/* NAVBAR */
+header {
+        background: linear-gradient(90deg, #af0303, #9d0404);
+    padding: 15px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+}
+
+.logo {
+    display: flex;
+    align-items: left;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo-img {
+    height: 75px;      
+    width: auto;        
+    margin-right: 6px;  
+}
+
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* HERO */
+.about-hero {
+    height: 150px;
+    background: linear-gradient(135deg, #b40000, #cb0505);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.about-hero h1 {
+    font-size: 40px;
+}
+
+/* CONTENT */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.section h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.section p {
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card.mission {
+    background: linear-gradient(135deg, #d90404, #cd0404);
+}
+
+.card.vision {
+    background: linear-gradient(135deg, #b40000, #ff3b3b);
+}
+
+.card.values {
+    background: linear-gradient(135deg, #7a0000, #c20707);
+}
+
+/* FACILITIES */
+.facilities {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.facility {
+    flex: 1 1 calc(50% - 20px);
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.facility:hover {
+    transform: translateY(-8px);
+}
+
+.facility img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.facility h4 {
+    margin-top: 10px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+    <img src="logo.png" alt="UEP Logo" class="logo-img">
+    <div class="logo">University of Eastern Pangasinan</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="courses.html">Courses</a>
+        <a href="news.html">News</a>
+        <a href="team.html">Team</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="about-hero">
+    <h1>About Our University</h1>
+</section>
+
+<!-- CONTENT -->
+<div class="container">
+
+    <div class="section">
+        <h2>About Our University</h2>
+        <p>
+           The University of Eastern Pangasinan (UEP) is a higher education institution located in Binalonan, Pangasinan, Philippines. Established in 2005 through a public-private partnership led by local government officials, the university was created to make quality tertiary education more accessible to students in Eastern Pangasinan and nearby areas.
+        <p>
+            UEP offers a variety of undergraduate and diploma programs across different fields such as education, business administration, information technology, criminology, hospitality management, and health-related courses like midwifery. Its academic programs are designed to equip students with both theoretical knowledge and practical skills, preparing them for professional careers and community service.
+    </div>
+
+    <div class="cards">
+        <div class="card mission">
+            <h3>Our Mission</h3>
+            <p>To provide accessible and quality education that empowers students to succeed globally.</p>
+        </div>
+
+        <div class="card vision">
+            <h3>Our Vision</h3>
+            <p>To become a leading university recognized for excellence in teaching and innovation.</p>
+        </div>
+
+        <div class="card values">
+            <h3>Our Values</h3>
+            <p>Integrity, Excellence, Innovation, and Student Success.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Our Facilities</h2>
+
+        <div class="facilities">
+            <div class="facility">
+                <img src="library3.jpg">
+                <h4>Modern Library</h4>
+                <p>Access thousands of books and digital resources.</p>
+            </div>
+
+            <div class="facility">
+                <img src="facility2.jpg">
+                <h4>Advanced Laboratories</h4>
+                <p>Hands-on learning with modern equipment.</p>
+            </div>
+
+            <div class="facility">
+                <img src="facility3.jpg">
+                <h4>Smart Classrooms</h4>
+                <p>Interactive and tech-enabled learning spaces.</p>
+            </div>
+
+            <div class="facility">
+                <img src="facility4.jpg">
+                <h4>Campus Environment</h4>
+                <p>A safe and inspiring place for students.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+© 2026 University of Eastern Pangasinan
+</footer>
+
+</body>
+</html>

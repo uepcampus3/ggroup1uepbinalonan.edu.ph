@@ -1,0 +1,243 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="logo.png">
+<title>University of Eastern Pangasinan</title>
+
+<style>
+    :root {
+      --primary-blue: #004080;
+      --secondary-blue: #003366;
+      --accent-gold: #ffd700;
+      --accent-red: #d32f2f;
+      --light-bg: #f9f9f9;
+      --white: #ffffff;
+      --transition: all 0.3s ease;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+     background: linear-gradient(to right, #eef2f3, #ffffff);
+    padding-top: 110px;
+}
+
+/* NAVBAR */
+header {
+        background: linear-gradient(90deg, #af0303, #9d0404);
+    padding: 15px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+}
+
+.logo {
+    display: flex;
+    align-items: left;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo-img {
+    height: 75px;      
+    width: auto;        
+    margin-right: 6px;  
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    height: 450px;
+    margin: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.hero img {
+    width: 65%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.hero img:hover {
+    transform: scale(1.05);
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    height: 430px;
+    margin: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.hero-video {
+    width: 65%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-text {
+    width: 35%;
+    height: 100%;
+
+    background: linear-gradient(135deg, #ab1f03, #e20707);
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 40px;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+/* INFO SECTION */
+.info {
+    display: flex;
+    margin: 20px;
+    gap: 15px;
+}
+
+.box {
+    flex: 1;
+    padding: 25px;
+    color: white;
+    border-radius: 10px;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.box:hover {
+    transform: translateY(-8px);
+}
+
+.box.dark {
+    background: linear-gradient(135deg, #090e11, #414345);
+}
+
+.box.blue {
+    background: linear-gradient(135deg, #2193b0, #6dd5ed);
+}
+
+.box.green {
+    background: linear-gradient(135deg, #56ab2f, #a8e063);
+}
+
+.box h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #232526, #414345);
+    color: white;
+    margin-top: 30px;
+    font-size: 14px;
+}
+</style>
+
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    
+    <img src="logo.png" alt="UEP Logo" class="logo-img">
+    <div class="logo">University of Eastern Pangasinan</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="courses.html">Courses</a>
+        <a href="news.html">News</a>
+        <a href="team.html">Team</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+
+    <video class="hero-video" src="yselvid.mp3.mp4" autoplay muted loop></video>
+
+    <div class="hero-text">
+        University of Eastern Pangasinan (UEP) is a student-centered institution committed to quality education, innovation, and developing globally competitive graduates.
+    </div>
+
+</section>
+
+<!-- INFO -->
+<section class="info">
+    <div class="box dark">
+        <h3>Helping Students</h3>
+        <p>We help students achieve their goals every year through quality education.</p>
+    </div>
+
+    <div class="box blue">
+        <h3>Online Education</h3>
+        <p>Study anytime and anywhere with our flexible online learning system.</p>
+    </div>
+
+    <div class="box green">
+        <h3>New Careers</h3>
+        <p>We prepare students for successful and rewarding future careers.</p>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    © 2026 University of Eastern Pangasinan | All Rights Reserved
+</footer>
+
+</body>
+</html>

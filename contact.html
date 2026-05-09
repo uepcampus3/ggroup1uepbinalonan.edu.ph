@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="logo.png">
+<title>Contact | University of Eastern Pangasinan</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #eef2f3, #ffffff);
+    padding-top: 110px;
+}
+
+/* NAVBAR */
+header {
+     background: linear-gradient(90deg, #af0303, #9d0404);
+    padding: 15px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo-img { 
+    height: 70px;      
+    width: auto;        
+    margin-right: 6px;  
+}
+
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* HERO */
+.contact-hero {
+    height: 150px;
+    background: linear-gradient(135deg, #b40000, #cb0505);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-desc {
+    max-width: 700px;
+    margin-top: 10px;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+/* CONTACT CARD */
+.contact-card {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* FORM GRID */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.full {
+    grid-column: span 2;
+}
+
+label {
+    font-size: 14px;
+    color: #555;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    resize: none;
+    height: 120px;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    padding: 10px;
+    background: linear-gradient(90deg, #d90404, #cd0404);
+    color: white;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* INFO */
+.info {
+    margin-top: 25px;
+}
+
+.info-item {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* SUCCESS MODAL */
+.success-box {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.success-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 400px;
+    animation: popUp 0.4s ease;
+}
+
+.checkmark {
+    font-size: 50px;
+    color: #2ecc71;
+}
+
+@keyframes popUp {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+        <img src="logo.png" alt="UEP Logo" class="logo-img">
+        <br>
+        <span>University of Eastern Pangasinan</span>
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="courses.html">Courses</a>
+        <a href="news.html">News</a>
+        <a href="team.html">Team</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="contact-hero">
+    <div>
+        <h1>Contact Us</h1>
+        <p class="hero-desc">Have questions? Reach out and our team will respond as soon as possible.</p>
+    </div>
+</section>
+
+<div class="container">
+
+    <div class="contact-card">
+
+        <form onsubmit="sendMessage(event)">
+            
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" required>
+                </div>
+
+                <div class="form-group">
+                <label>Contact Number</label>
+                <input type="tel" pattern="[0-9]+" 
+                     title="Numbers only" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Subject</label>
+                    <input type="text" required>
+                </div>
+
+                <div class="form-group full">
+                    <label>Message</label>
+                    <textarea required></textarea>
+                </div>
+
+                <div class="form-group full">
+                    <button class="btn">Send Message</button>
+                </div>
+
+            </div>
+
+        </form>
+
+        <div class="info">
+            <div class="info-item">📧 universityofeasternpangasinan @email.com</div>
+            <div class="info-item">📞 +63 912 345 6789</div>
+            <div class="info-item">📍 Philippines</div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- SUCCESS -->
+<div id="successBox" class="success-box">
+    <div class="success-content">
+        <div class="checkmark">✔</div>
+        <h2>Message Sent!</h2>
+        <p>We will respond to you as soon as possible.</p>
+        <button class="btn" onclick="closeSuccess()">OK</button>
+    </div>
+</div>
+
+<footer>
+© 2026 University of Eastern Pangasinan
+</footer>
+
+<script>
+function sendMessage(e) {
+    e.preventDefault();
+    document.getElementById("successBox").style.display = "flex";
+    e.target.reset();
+}
+
+function closeSuccess() {
+    document.getElementById("successBox").style.display = "none";
+}
+</script>
+
+</body>
+</html>

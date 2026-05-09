@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="logo.png">
+<title>Team | University of Eastern Pangasinan</title>
+
+<style>
+* {
+     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #eef2f3, #ffffff);
+    padding-top: 110px;
+}
+
+/* NAVBAR */
+header {
+    background: linear-gradient(90deg, #af0303, #9d0404);
+    padding: 15px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: left;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo-img {
+    height: 75px;      
+    width: auto;        
+    margin-right: 6px;  
+}
+
+
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* HERO */
+.team-hero {
+    height: 150px;
+    background: linear-gradient(135deg, #b40000, #cb0505);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.team-hero h1 {
+    font-size: 40px;
+}
+
+.hero-desc {
+    max-width: 700px;
+    margin-top: 10px;
+    opacity: 0.9;
+}
+
+/* CONTAINER */
+.container {
+   max-width: 1100px;
+    margin: 40px auto 0 auto;
+}
+
+/* GRID */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+/* CARD */
+.team-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.team-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* IMAGE */
+.profile-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* CONTENT */
+.team-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.role {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: linear-gradient(90deg, #d90404, #cd0404);
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+}
+
+/* SOCIAL ICONS */
+.socials {
+    margin-top: 10px;
+}
+
+.socials span {
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    background: white;
+    width: 90%;
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    animation: popUp 0.3s ease;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* ANIMATION */
+@keyframes popUp {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* FOOTER */
+footer {
+    
+  background: linear-gradient(90deg, #232526, #414345);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+
+    width: 100vw;
+    margin-top: 30px;
+
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="logo.png" class="logo-img">
+    <div class="logo">University of Eastern Pangasinan</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="courses.html">Courses</a>
+        <a href="news.html">News</a>
+        <a href="team.html">Team</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="team-hero">
+    <div>
+        <h1>Meet Our Team</h1>
+        <p class="hero-desc">
+            Passionate professionals dedicated to shaping future leaders.
+        </p>
+    </div>
+</section>
+
+<div class="container">
+   <div class="team-grid">
+
+    <!-- MEMBER 1 -->
+    <div class="team-card">
+        <img src="member1.jpg" class="profile-img">
+        <div class="team-content">
+            <h3>Miarose Alvarado</h3>
+            <div class="role">HTML Developer</div>
+            <div class="info">
+                <p>Email: miarose@email.com</p>
+                <p>Phone: 0912-345-6789</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MEMBER 2 -->
+    <div class="team-card">
+        <img src="member2.jpg" class="profile-img">
+        <div class="team-content">
+            <h3>Jeselle Pedrozo</h3>
+            <div class="role">Project Manager</div>
+            <div class="info">
+                <p>Email: jeselle@email.com</p>
+                <p>Phone: 0913-456-7890</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MEMBER 3 -->
+    <div class="team-card">
+        <img src="member3.jpg" class="profile-img">
+        <div class="team-content">
+            <h3>Patrick Verceles</h3>
+            <div class="role">CSS Designer</div>
+            <div class="info">
+                <p>Email: patrick@email.com</p>
+                <p>Phone: 0915-111-2233</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MEMBER 4 -->
+    <div class="team-card">
+        <img src="member4.jpg" class="profile-img">
+        <div class="team-content">
+            <h3>John Carlo Bautista</h3>
+            <div class="role">UI/UX Designer</div>
+            <div class="info">
+                <p>Email: johncarlo@email.com</p>
+                <p>Phone: 0917-888-9999</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MEMBER 5 -->
+    <div class="team-card">
+        <img src="member5.jpg" class="profile-img">
+        <div class="team-content">
+            <h3>Warren Carlo Baliton</h3>
+            <div class="role">Content Creator</div>
+            <div class="info">
+                <p>Email: warren@email.com</p>
+                <p>Phone: 0918-123-4567</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MEMBER 6 -->
+    <div class="team-card">
+        <img src="member6.jpg" class="profile-img">
+        <div class="team-content">
+            <h3>Patrick Rosquita</h3>
+            <div class="role">HR Manager</div>
+            <div class="info">
+                <p>Email: patrick@email.com</p>
+                <p>Phone: 0919-222-3344</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MEMBER 7 -->
+    <div class="team-card">
+        <img src="member7.jpg" class="profile-img">
+        <div class="team-content">
+            <h3>Angelo Lagmay</h3>
+            <div class="role">Marketing Specialist</div>
+            <div class="info">
+                <p>Email: angelo@email.com</p>
+                <p>Phone: 0920-555-6677</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MEMBER 8 -->
+    <div class="team-card">
+        <img src="member8.jpg" class="profile-img">
+        <div class="team-content">
+            <h3>Prince Florence Flores</h3>
+            <div class="role">Project Coordinator</div>
+            <div class="info">
+                <p>Email: prince@email.com</p>
+                <p>Phone: 0921-888-9900</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- MODAL -->
+<div id="profileModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="name"></h2>
+        <p id="role"></p>
+        <p id="skills"></p>
+        <p id="email"></p>
+        <p id="phone"></p>
+    </div>
+</div>
+
+<footer>
+© 2026 University of Eastern Pangasinan
+</footer>
+
+<script>
+function openModal(name, role, skills, email, phone) {
+    document.getElementById("profileModal").style.display = "block";
+    document.getElementById("name").innerText = name;
+    document.getElementById("role").innerText = role;
+    document.getElementById("skills").innerText = "Skills: " + skills;
+    document.getElementById("email").innerText = "Email: " + email;
+    document.getElementById("phone").innerText = "Phone: " + phone;
+}
+
+function closeModal() {
+    document.getElementById("profileModal").style.display = "none";
+}
+</script>
+
+</body>
+</html>
